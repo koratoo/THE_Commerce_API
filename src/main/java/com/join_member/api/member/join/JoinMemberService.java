@@ -9,8 +9,8 @@ public class JoinMemberService {
     @Autowired
     private JoinMemberRepository joinMemberRepository;
 
-    public void saveMemberStatus (JoinMemberVO vo) {
-        joinMemberRepository.save(vo);
+    public void saveMemberStatus (JoinMemberDTO dto) {
+        joinMemberRepository.save(dto);
     }
 
 }

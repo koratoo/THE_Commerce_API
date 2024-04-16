@@ -1,5 +1,6 @@
 package com.join_member.api.member.join;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,9 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class JoinMemberController {
+
+    private final JoinMemberService joinMemberService;
     @PostMapping("/user/join")
-    public ResponseEntity<Void> saveJoinMemberStatus(JoinMemberVO vo) {
+    public ResponseEntity<Void> saveJoinMemberStatus(JoinMemberDTO dto) {
+        joinMemberService.saveMemberStatus(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }

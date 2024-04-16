@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface JoinMemberRepository extends JpaRepository <String, Object> {
-    void save(JoinMemberVO vo);
+    void save(JoinMemberDTO dto);
 }
