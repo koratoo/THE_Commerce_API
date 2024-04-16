@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <pre>
+ *     Ticket Name : REQ_TC_001
  *     Class Name : MemberJoinController.java
  *     Created Date : 2024.04.17
  *     Writer : Jisung Kim
+ *     Description : 회원가입 자들의 정보를 받아 저장하는 Restful Api 설계
  * </pre>
  */
 @RestController
